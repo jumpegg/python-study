@@ -34,8 +34,11 @@
 #         return "this is test : %s" % input
 #     return inner
 
+# a = outer(1)
+# b = outer(1)
+
 # print(outer('value'))
-# print(outer('value')())
+# print(outer('value1123123'))
 
 ## 익명함수 : lambda
 
@@ -53,4 +56,3 @@
 ## 람다 사용
 
 # test(inputs, lambda num: num + 2)
-

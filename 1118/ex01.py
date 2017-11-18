@@ -20,7 +20,7 @@
 # # None 은 아무것도 없다는 것을 뜻한다.
 # # Bool값으로 평가될 때는 False 처럼 보이지만 False 와는 다른 특징이 있다.
 
-# def isNone(input):
+# def isNone(input = None):
 #     if input is None:
 #         print("It's None")
 #     elif input:
@@ -30,11 +30,11 @@
 
 # # None Test
 
-# isNone(None)
+# isNone()
 # isNone(True)
 # isNone(False)
 # isNone(0)
-# isNone(())
+# isNone('')
 
 ## 함수 인자값 받기 형태
 
@@ -51,10 +51,10 @@
 
 ## 기본 매개변수값 지정하기
 
-# def menu(input1, input2, input3 = 'this is input3'):
+# def menu(input1, input2= 'this is input2', input3 = 'this is input3'):
 #     print(input1 + input2 + input3)
 
-# menu('test1', 'test2')
+# menu('test1')
 
 ##! 기본 인자값은 함수를 실행할 때 선언되는 것이 아니라
 ##! 함수를 정의할 때 선언된다 
@@ -85,26 +85,27 @@
 
 ## 키워드 인자 모으기
 # def print_kwargs(**kwargs):
-#     print('keyword arguments:', kwargs)
+# 	type(kwargs)
+# 	print('keyword arguments:', kwargs)
 
 # print_kwargs(wine='merlot', entree='mutton', dessert='macaroon')
 
 ## docstring
 
-# def echo(anything):
-#     'echo returns its input argument'
-#     return anything
+from collections import defaultdict
 
-# def print_if_true(thing, check):
-#     '''
-#     Print the first ajsdkfl;askdjf;lasdifjalsdifj
-#     '''
-#     if check:
-#         print(thing)
+def echo(anything):
+    'echo returns its input argument'
+    return anything
 
+def print_if_true(thing, check):
+    '''
+    Print the first ajsdkfl;askdjf;lasdifjalsdifj
+    '''
+    if check:
+        print(thing)
+
+# help(defaultdict.__missing__.__doc__)
 # help(echo)
 # help(echo.__doc__)
 # help(print_if_true)
-
-
-
